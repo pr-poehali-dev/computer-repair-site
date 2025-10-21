@@ -174,7 +174,7 @@ function Index() {
           <h2 className="text-5xl font-bold text-center mb-12 text-white" style={{textShadow: '0 0 15px rgba(156,163,175,0.6)'}}>
             ПРАЙС-ЛИСТ
           </h2>
-          <Card className="bg-slate-900/50 border-2 border-gray-500/30">
+          <Card className="bg-black border-2 border-gray-500/30">
             <CardContent className="p-0">
               <div className="divide-y divide-gray-500/20">
                 {prices.map((item, idx) => (
