@@ -59,7 +59,7 @@ function Index() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-zinc-900 via-stone-800 to-neutral-950">
+    <div className="min-h-screen bg-gradient-to-b from-black via-zinc-950 to-black">
       <nav className="fixed top-0 w-full bg-black/80 backdrop-blur-md border-b border-orange-500/20 z-50">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center gap-2">
