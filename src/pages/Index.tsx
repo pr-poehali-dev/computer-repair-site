@@ -65,7 +65,7 @@ function Index() {
           <div className="flex items-center gap-2">
             <Icon name="Monitor" className="text-cyan-400" size={32} />
             <span className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-pink-500">
-              ОПЫТРОН
+              10RegService
             </span>
           </div>
           <div className="hidden md:flex gap-6">
@@ -334,7 +334,7 @@ function Index() {
             </div>
             <div className="flex flex-col items-center gap-3">
               <Icon name="Mail" className="text-pink-400" size={48} />
-              <p className="text-xl text-pink-300">info@opytron.ru</p>
+              <p className="text-xl text-pink-300">info@10regservice.ru</p>
             </div>
             <div className="flex flex-col items-center gap-3">
               <Icon name="MapPin" className="text-violet-400" size={48} />
@@ -346,7 +346,7 @@ function Index() {
 
       <footer className="py-8 px-4 border-t border-cyan-500/20 bg-slate-950">
         <div className="container mx-auto text-center">
-          <p className="text-cyan-400">© 2025 ОПЫТРОН. Ремонт из будущего</p>
+          <p className="text-cyan-400">© 2025 10RegService. Ремонт из будущего</p>
         </div>
       </footer>
     </div>
