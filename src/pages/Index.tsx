@@ -52,6 +52,12 @@ function Index() {
     { type: 'Сложный', time: '3-7 дней', desc: 'Ремонт на уровне компонентов' },
   ];
 
+  const pcConfigs = [
+    { name: 'Офисный', price: 'от 35 000₽', specs: ['Intel Core i3', '8GB RAM', 'SSD 256GB', 'Встроенная графика'] },
+    { name: 'Игровой', price: 'от 80 000₽', specs: ['Intel Core i5/Ryzen 5', '16GB RAM', 'SSD 512GB', 'RTX 4060'] },
+    { name: 'Профессиональный', price: 'от 120 000₽', specs: ['Intel Core i7/Ryzen 7', '32GB RAM', 'SSD 1TB', 'RTX 4070'] },
+  ];
+
   const reviews = [
     { name: 'Алексей М.', text: 'Отличная работа! Восстановили данные с убитого HDD', rating: 5 },
     { name: 'Мария К.', text: 'Быстро починили ноутбук, теперь летает!', rating: 5 },
@@ -191,7 +197,35 @@ function Index() {
         </div>
       </section>
 
-      <section id="ремонт" className="py-20 px-4 bg-neutral-950/50">
+      <section id="сборка" className="py-20 px-4 bg-neutral-950/50">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="text-5xl font-bold text-center mb-12 text-white" style={{textShadow: '0 0 15px rgba(156,163,175,0.6)'}}>
+            КОНФИГУРАЦИИ ПК
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {pcConfigs.map((config, idx) => (
+              <Card key={idx} className="bg-neutral-900/50 border-2 border-gray-500/30 hover:border-gray-500 transition-all duration-300 hover:shadow-[0_0_20px_rgba(156,163,175,0.4)]">
+                <CardHeader>
+                  <CardTitle className="text-3xl text-gray-400">{config.name}</CardTitle>
+                  <CardDescription className="text-2xl text-stone-200 font-bold">{config.price}</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-2">
+                    {config.specs.map((spec, i) => (
+                      <li key={i} className="flex items-center gap-2 text-stone-400">
+                        <Icon name="Check" className="text-gray-400" size={18} />
+                        {spec}
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="ремонт" className="py-20 px-4">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-5xl font-bold text-center mb-12 text-white" style={{textShadow: '0 0 15px rgba(156,163,175,0.6)'}}>
             ВИДЫ РЕМОНТА
