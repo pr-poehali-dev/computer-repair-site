@@ -5,11 +5,13 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Badge } from '@/components/ui/badge';
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import Icon from '@/components/ui/icon';
 import { useToast } from '@/hooks/use-toast';
 
 function Index() {
   const { toast } = useToast();
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -77,6 +79,31 @@ function Index() {
               </a>
             ))}
           </div>
+          <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
+            <SheetTrigger asChild className="md:hidden">
+              <Button
+                variant="ghost"
+                size="icon"
+                className="text-cyan-400 hover:text-pink-400 hover:bg-pink-500/10"
+              >
+                <Icon name="Menu" size={28} />
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="right" className="bg-slate-950 border-l border-cyan-500/30 w-64">
+              <div className="flex flex-col gap-6 mt-8">
+                {['Услуги', 'Прайс', 'Ремонт', 'Гарантии', 'Отзывы', 'Контакты'].map((item) => (
+                  <a
+                    key={item}
+                    href={`#${item.toLowerCase()}`}
+                    className="text-xl text-cyan-300 hover:text-pink-400 transition-colors duration-300"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {item}
+                  </a>
+                ))}
+              </div>
+            </SheetContent>
+          </Sheet>
         </div>
       </nav>
 
