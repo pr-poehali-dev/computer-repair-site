@@ -169,7 +169,7 @@ function Index() {
         </div>
       </section>
 
-      <section id="прайс" className="py-20 px-4">
+      <section id="прайс" className="py-20 px-4 bg-neutral-950/50">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-5xl font-bold text-center mb-12 text-white" style={{textShadow: '0 0 15px rgba(156,163,175,0.6)'}}>
             ПРАЙС-ЛИСТ
