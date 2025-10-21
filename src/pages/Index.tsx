@@ -117,13 +117,25 @@ function Index() {
           <p className="text-xl md:text-2xl text-cyan-300 mb-8 animate-fade-in" style={{ animationDelay: '0.2s' }}>
             Ремонт техники из будущего в настоящем
           </p>
-          <Button
-            size="lg"
-            className="bg-gradient-to-r from-cyan-500 to-pink-500 hover:from-cyan-600 hover:to-pink-600 text-white font-bold text-lg px-8 py-6 rounded-none border-2 border-cyan-400 shadow-[0_0_20px_rgba(0,255,255,0.5)] hover:shadow-[0_0_30px_rgba(255,20,147,0.7)] transition-all duration-300"
-            onClick={() => document.getElementById('diagnosis')?.scrollIntoView({ behavior: 'smooth' })}
-          >
-            БЕСПЛАТНАЯ ДИАГНОСТИКА
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button
+              size="lg"
+              className="bg-gradient-to-r from-cyan-500 to-pink-500 hover:from-cyan-600 hover:to-pink-600 text-white font-bold text-lg px-8 py-6 rounded-none border-2 border-cyan-400 shadow-[0_0_20px_rgba(0,255,255,0.5)] hover:shadow-[0_0_30px_rgba(255,20,147,0.7)] transition-all duration-300"
+              onClick={() => document.getElementById('diagnosis')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              БЕСПЛАТНАЯ ДИАГНОСТИКА
+            </Button>
+            <Button
+              size="lg"
+              asChild
+              className="bg-gradient-to-r from-pink-500 to-violet-500 hover:from-pink-600 hover:to-violet-600 text-white font-bold text-lg px-8 py-6 rounded-none border-2 border-pink-400 shadow-[0_0_20px_rgba(255,20,147,0.5)] hover:shadow-[0_0_30px_rgba(138,43,226,0.7)] transition-all duration-300"
+            >
+              <a href="tel:+79991234567" className="flex items-center gap-2">
+                <Icon name="Phone" size={24} />
+                ПОЗВОНИТЬ
+              </a>
+            </Button>
+          </div>
         </div>
       </section>
 
