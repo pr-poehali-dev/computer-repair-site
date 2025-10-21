@@ -59,12 +59,12 @@ function Index() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-950 via-purple-950 to-slate-950">
-      <nav className="fixed top-0 w-full bg-slate-950/80 backdrop-blur-md border-b border-cyan-500/20 z-50">
+    <div className="min-h-screen bg-gradient-to-b from-zinc-900 via-stone-800 to-neutral-950">
+      <nav className="fixed top-0 w-full bg-black/80 backdrop-blur-md border-b border-orange-500/20 z-50">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center gap-2">
-            <Icon name="Monitor" className="text-cyan-400" size={32} />
-            <span className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-pink-500">
+            <Icon name="Monitor" className="text-orange-400" size={32} />
+            <span className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-600">
               10RegService
             </span>
           </div>
@@ -73,7 +73,7 @@ function Index() {
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
-                className="text-cyan-300 hover:text-pink-400 transition-colors duration-300"
+                className="text-stone-300 hover:text-orange-400 transition-colors duration-300"
               >
                 {item}
               </a>
@@ -84,18 +84,18 @@ function Index() {
               <Button
                 variant="ghost"
                 size="icon"
-                className="text-cyan-400 hover:text-pink-400 hover:bg-pink-500/10"
+                className="text-orange-400 hover:text-amber-500 hover:bg-orange-500/10"
               >
                 <Icon name="Menu" size={28} />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="bg-slate-950 border-l border-cyan-500/30 w-64">
+            <SheetContent side="right" className="bg-black border-l border-orange-500/30 w-64">
               <div className="flex flex-col gap-6 mt-8">
                 {['Услуги', 'Прайс', 'Ремонт', 'Гарантии', 'Отзывы', 'Контакты'].map((item) => (
                   <a
                     key={item}
                     href={`#${item.toLowerCase()}`}
-                    className="text-xl text-cyan-300 hover:text-pink-400 transition-colors duration-300"
+                    className="text-xl text-stone-300 hover:text-orange-400 transition-colors duration-300"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {item}
@@ -109,18 +109,18 @@ function Index() {
 
       <section className="pt-32 pb-20 px-4">
         <div className="container mx-auto text-center">
-          <h1 className="text-6xl md:text-8xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-pink-500 to-violet-500 animate-fade-in">
+          <h1 className="text-6xl md:text-8xl font-bold mb-6 text-white animate-fade-in" style={{textShadow: '0 0 20px rgba(251,146,60,0.8), 0 0 40px rgba(251,146,60,0.4)'}}>
             КОМПЬЮТЕРНАЯ
             <br />
             МАСТЕРСКАЯ
           </h1>
-          <p className="text-xl md:text-2xl text-cyan-300 mb-8 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+          <p className="text-xl md:text-2xl text-stone-300 mb-8 animate-fade-in" style={{ animationDelay: '0.2s' }}>
             Ремонт техники из будущего в настоящем
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               size="lg"
-              className="bg-gradient-to-r from-cyan-500 to-pink-500 hover:from-cyan-600 hover:to-pink-600 text-white font-bold text-lg px-8 py-6 rounded-none border-2 border-cyan-400 shadow-[0_0_20px_rgba(0,255,255,0.5)] hover:shadow-[0_0_30px_rgba(255,20,147,0.7)] transition-all duration-300"
+              className="bg-gradient-to-r from-orange-500 to-amber-600 hover:from-orange-600 hover:to-amber-700 text-white font-bold text-lg px-8 py-6 rounded-none border-2 border-orange-400 shadow-[0_0_20px_rgba(251,146,60,0.5)] hover:shadow-[0_0_30px_rgba(251,146,60,0.7)] transition-all duration-300"
               onClick={() => document.getElementById('diagnosis')?.scrollIntoView({ behavior: 'smooth' })}
             >
               БЕСПЛАТНАЯ ДИАГНОСТИКА
@@ -128,7 +128,7 @@ function Index() {
             <Button
               size="lg"
               asChild
-              className="bg-gradient-to-r from-pink-500 to-violet-500 hover:from-pink-600 hover:to-violet-600 text-white font-bold text-lg px-8 py-6 rounded-none border-2 border-pink-400 shadow-[0_0_20px_rgba(255,20,147,0.5)] hover:shadow-[0_0_30px_rgba(138,43,226,0.7)] transition-all duration-300"
+              className="bg-gradient-to-r from-amber-600 to-orange-700 hover:from-amber-700 hover:to-orange-800 text-white font-bold text-lg px-8 py-6 rounded-none border-2 border-amber-500 shadow-[0_0_20px_rgba(245,158,11,0.5)] hover:shadow-[0_0_30px_rgba(245,158,11,0.7)] transition-all duration-300"
             >
               <a href="tel:+79991234567" className="flex items-center gap-2">
                 <Icon name="Phone" size={24} />
@@ -139,29 +139,29 @@ function Index() {
         </div>
       </section>
 
-      <section id="услуги" className="py-20 px-4 bg-slate-950/50">
+      <section id="услуги" className="py-20 px-4 bg-neutral-950/50">
         <div className="container mx-auto">
-          <h2 className="text-5xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-cyan-400">
+          <h2 className="text-5xl font-bold text-center mb-12 text-white" style={{textShadow: '0 0 15px rgba(251,146,60,0.6)'}}>
             НАШИ УСЛУГИ
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, idx) => (
               <Card
                 key={idx}
-                className="bg-slate-900/50 border-2 border-cyan-500/30 hover:border-pink-500 transition-all duration-300 hover:shadow-[0_0_20px_rgba(255,20,147,0.4)] group"
+                className="bg-neutral-900/50 border-2 border-orange-500/30 hover:border-amber-500 transition-all duration-300 hover:shadow-[0_0_20px_rgba(251,146,60,0.4)] group"
               >
                 <CardHeader>
                   <div className="flex items-center gap-4">
-                    <div className="p-3 bg-gradient-to-br from-cyan-500 to-pink-500 rounded-none">
+                    <div className="p-3 bg-gradient-to-br from-orange-500 to-amber-600 rounded-none">
                       <Icon name={service.icon as any} className="text-white" size={28} />
                     </div>
-                    <CardTitle className="text-cyan-300 group-hover:text-pink-400 transition-colors">
+                    <CardTitle className="text-stone-200 group-hover:text-orange-400 transition-colors">
                       {service.title}
                     </CardTitle>
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-slate-400">{service.desc}</CardDescription>
+                  <CardDescription className="text-stone-400">{service.desc}</CardDescription>
                 </CardContent>
               </Card>
             ))}
@@ -171,16 +171,16 @@ function Index() {
 
       <section id="прайс" className="py-20 px-4">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-5xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-pink-500">
+          <h2 className="text-5xl font-bold text-center mb-12 text-white" style={{textShadow: '0 0 15px rgba(251,146,60,0.6)'}}>
             ПРАЙС-ЛИСТ
           </h2>
           <Card className="bg-slate-900/50 border-2 border-cyan-500/30">
             <CardContent className="p-0">
-              <div className="divide-y divide-cyan-500/20">
+              <div className="divide-y divide-orange-500/20">
                 {prices.map((item, idx) => (
-                  <div key={idx} className="flex justify-between items-center p-6 hover:bg-pink-500/10 transition-colors">
-                    <span className="text-cyan-300 text-lg">{item.service}</span>
-                    <Badge className="bg-gradient-to-r from-cyan-500 to-pink-500 text-white font-bold text-lg px-4 py-2">
+                  <div key={idx} className="flex justify-between items-center p-6 hover:bg-orange-500/10 transition-colors">
+                    <span className="text-stone-200 text-lg">{item.service}</span>
+                    <Badge className="bg-gradient-to-r from-orange-500 to-amber-600 text-white font-bold text-lg px-4 py-2">
                       {item.price}
                     </Badge>
                   </div>
@@ -191,20 +191,20 @@ function Index() {
         </div>
       </section>
 
-      <section id="ремонт" className="py-20 px-4 bg-slate-950/50">
+      <section id="ремонт" className="py-20 px-4 bg-neutral-950/50">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-5xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500">
+          <h2 className="text-5xl font-bold text-center mb-12 text-white" style={{textShadow: '0 0 15px rgba(251,146,60,0.6)'}}>
             ВИДЫ РЕМОНТА
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {repairTypes.map((repair, idx) => (
-              <Card key={idx} className="bg-slate-900/50 border-2 border-pink-500/30 hover:border-violet-500 transition-all duration-300">
+              <Card key={idx} className="bg-neutral-900/50 border-2 border-orange-500/30 hover:border-amber-500 transition-all duration-300">
                 <CardHeader>
-                  <CardTitle className="text-3xl text-pink-400">{repair.type}</CardTitle>
-                  <CardDescription className="text-xl text-cyan-300">{repair.time}</CardDescription>
+                  <CardTitle className="text-3xl text-orange-400">{repair.type}</CardTitle>
+                  <CardDescription className="text-xl text-stone-300">{repair.time}</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-slate-400">{repair.desc}</p>
+                  <p className="text-stone-400">{repair.desc}</p>
                 </CardContent>
               </Card>
             ))}
@@ -214,30 +214,30 @@ function Index() {
 
       <section id="гарантии" className="py-20 px-4">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-5xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-violet-500">
+          <h2 className="text-5xl font-bold text-center mb-12 text-white" style={{textShadow: '0 0 15px rgba(251,146,60,0.6)'}}>
             ГАРАНТИИ И СРОКИ
           </h2>
-          <Card className="bg-slate-900/50 border-2 border-violet-500/30">
+          <Card className="bg-neutral-900/50 border-2 border-orange-500/30">
             <CardContent className="p-8 space-y-6">
               <div className="flex items-start gap-4">
-                <Icon name="Shield" className="text-cyan-400 mt-1" size={32} />
+                <Icon name="Shield" className="text-orange-400 mt-1" size={32} />
                 <div>
-                  <h3 className="text-2xl font-bold text-cyan-300 mb-2">Гарантия на работу</h3>
-                  <p className="text-slate-400 text-lg">До 12 месяцев на все виды ремонта</p>
+                  <h3 className="text-2xl font-bold text-stone-200 mb-2">Гарантия на работу</h3>
+                  <p className="text-stone-400 text-lg">До 12 месяцев на все виды ремонта</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <Icon name="Clock" className="text-pink-400 mt-1" size={32} />
+                <Icon name="Clock" className="text-amber-500 mt-1" size={32} />
                 <div>
-                  <h3 className="text-2xl font-bold text-pink-300 mb-2">Сроки выполнения</h3>
-                  <p className="text-slate-400 text-lg">От 1 часа до 7 дней в зависимости от сложности</p>
+                  <h3 className="text-2xl font-bold text-stone-200 mb-2">Сроки выполнения</h3>
+                  <p className="text-stone-400 text-lg">От 1 часа до 7 дней в зависимости от сложности</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <Icon name="CheckCircle" className="text-violet-400 mt-1" size={32} />
+                <Icon name="CheckCircle" className="text-orange-500 mt-1" size={32} />
                 <div>
-                  <h3 className="text-2xl font-bold text-violet-300 mb-2">Качество деталей</h3>
-                  <p className="text-slate-400 text-lg">Используем только оригинальные комплектующие</p>
+                  <h3 className="text-2xl font-bold text-stone-200 mb-2">Качество деталей</h3>
+                  <p className="text-stone-400 text-lg">Используем только оригинальные комплектующие</p>
                 </div>
               </div>
             </CardContent>
@@ -245,61 +245,61 @@ function Index() {
         </div>
       </section>
 
-      <section id="diagnosis" className="py-20 px-4 bg-slate-950/50">
+      <section id="diagnosis" className="py-20 px-4 bg-neutral-950/50">
         <div className="container mx-auto max-w-2xl">
-          <h2 className="text-5xl font-bold text-center mb-4 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-cyan-400">
+          <h2 className="text-5xl font-bold text-center mb-4 text-white" style={{textShadow: '0 0 15px rgba(251,146,60,0.6)'}}>
             ОНЛАЙН-ДИАГНОСТИКА
           </h2>
-          <p className="text-center text-cyan-300 mb-12 text-lg">Опишите проблему — мы оценим стоимость ремонта</p>
-          <Card className="bg-slate-900/50 border-2 border-cyan-500/30">
+          <p className="text-center text-stone-300 mb-12 text-lg">Опишите проблему — мы оценим стоимость ремонта</p>
+          <Card className="bg-neutral-900/50 border-2 border-orange-500/30">
             <CardContent className="p-8">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <Label htmlFor="name" className="text-cyan-300 text-lg">Ваше имя</Label>
+                  <Label htmlFor="name" className="text-stone-200 text-lg">Ваше имя</Label>
                   <Input
                     id="name"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="bg-slate-950 border-cyan-500/50 text-white mt-2"
+                    className="bg-black border-orange-500/50 text-white mt-2"
                     required
                   />
                 </div>
                 <div>
-                  <Label htmlFor="phone" className="text-cyan-300 text-lg">Телефон</Label>
+                  <Label htmlFor="phone" className="text-stone-200 text-lg">Телефон</Label>
                   <Input
                     id="phone"
                     type="tel"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="bg-slate-950 border-cyan-500/50 text-white mt-2"
+                    className="bg-black border-orange-500/50 text-white mt-2"
                     required
                   />
                 </div>
                 <div>
-                  <Label htmlFor="device" className="text-cyan-300 text-lg">Тип устройства</Label>
+                  <Label htmlFor="device" className="text-stone-200 text-lg">Тип устройства</Label>
                   <Input
                     id="device"
                     value={formData.device}
                     onChange={(e) => setFormData({ ...formData, device: e.target.value })}
                     placeholder="Ноутбук, ПК, планшет..."
-                    className="bg-slate-950 border-cyan-500/50 text-white mt-2"
+                    className="bg-black border-orange-500/50 text-white mt-2"
                     required
                   />
                 </div>
                 <div>
-                  <Label htmlFor="problem" className="text-cyan-300 text-lg">Описание проблемы</Label>
+                  <Label htmlFor="problem" className="text-stone-200 text-lg">Описание проблемы</Label>
                   <Textarea
                     id="problem"
                     value={formData.problem}
                     onChange={(e) => setFormData({ ...formData, problem: e.target.value })}
                     placeholder="Подробно опишите, что случилось..."
-                    className="bg-slate-950 border-cyan-500/50 text-white mt-2 min-h-32"
+                    className="bg-black border-orange-500/50 text-white mt-2 min-h-32"
                     required
                   />
                 </div>
                 <Button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-cyan-500 to-pink-500 hover:from-cyan-600 hover:to-pink-600 text-white font-bold text-lg py-6 rounded-none border-2 border-cyan-400 shadow-[0_0_20px_rgba(0,255,255,0.5)] hover:shadow-[0_0_30px_rgba(255,20,147,0.7)] transition-all duration-300"
+                  className="w-full bg-gradient-to-r from-orange-500 to-amber-600 hover:from-orange-600 hover:to-amber-700 text-white font-bold text-lg py-6 rounded-none border-2 border-orange-400 shadow-[0_0_20px_rgba(251,146,60,0.5)] hover:shadow-[0_0_30px_rgba(251,146,60,0.7)] transition-all duration-300"
                 >
                   ОТПРАВИТЬ ЗАЯВКУ
                 </Button>
@@ -311,22 +311,22 @@ function Index() {
 
       <section id="отзывы" className="py-20 px-4">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-5xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-violet-500 to-pink-500">
+          <h2 className="text-5xl font-bold text-center mb-12 text-white" style={{textShadow: '0 0 15px rgba(251,146,60,0.6)'}}>
             ОТЗЫВЫ КЛИЕНТОВ
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {reviews.map((review, idx) => (
-              <Card key={idx} className="bg-slate-900/50 border-2 border-violet-500/30">
+              <Card key={idx} className="bg-neutral-900/50 border-2 border-orange-500/30">
                 <CardHeader>
-                  <CardTitle className="text-pink-400">{review.name}</CardTitle>
+                  <CardTitle className="text-orange-400">{review.name}</CardTitle>
                   <div className="flex gap-1">
                     {[...Array(review.rating)].map((_, i) => (
-                      <Icon key={i} name="Star" className="text-yellow-400 fill-yellow-400" size={20} />
+                      <Icon key={i} name="Star" className="text-amber-400 fill-amber-400" size={20} />
                     ))}
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-slate-400">{review.text}</p>
+                  <p className="text-stone-400">{review.text}</p>
                 </CardContent>
               </Card>
             ))}
@@ -334,31 +334,31 @@ function Index() {
         </div>
       </section>
 
-      <section id="контакты" className="py-20 px-4 bg-slate-950/50">
+      <section id="контакты" className="py-20 px-4 bg-neutral-950/50">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-5xl font-bold mb-12 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-pink-500">
+          <h2 className="text-5xl font-bold mb-12 text-white" style={{textShadow: '0 0 15px rgba(251,146,60,0.6)'}}>
             КОНТАКТЫ
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="flex flex-col items-center gap-3">
-              <Icon name="Phone" className="text-cyan-400" size={48} />
-              <p className="text-xl text-cyan-300">+7 (999) 123-45-67</p>
+              <Icon name="Phone" className="text-orange-400" size={48} />
+              <p className="text-xl text-stone-200">+7 (999) 123-45-67</p>
             </div>
             <div className="flex flex-col items-center gap-3">
-              <Icon name="Mail" className="text-pink-400" size={48} />
-              <p className="text-xl text-pink-300">info@10regservice.ru</p>
+              <Icon name="Mail" className="text-amber-500" size={48} />
+              <p className="text-xl text-stone-200">info@10regservice.ru</p>
             </div>
             <div className="flex flex-col items-center gap-3">
-              <Icon name="MapPin" className="text-violet-400" size={48} />
-              <p className="text-xl text-violet-300">г. Москва, ул. Будущего, 42</p>
+              <Icon name="MapPin" className="text-orange-500" size={48} />
+              <p className="text-xl text-stone-200">г. Москва, ул. Будущего, 42</p>
             </div>
           </div>
         </div>
       </section>
 
-      <footer className="py-8 px-4 border-t border-cyan-500/20 bg-slate-950">
+      <footer className="py-8 px-4 border-t border-orange-500/20 bg-black">
         <div className="container mx-auto text-center">
-          <p className="text-cyan-400">© 2025 10RegService. Ремонт из будущего</p>
+          <p className="text-stone-400">© 2025 10RegService. Ремонт из будущего</p>
         </div>
       </footer>
     </div>
